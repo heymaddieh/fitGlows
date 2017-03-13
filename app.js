@@ -1,5 +1,5 @@
-angular.module('fitGlows', ['ui.router'])
-  .config(function($stateProvider, $urlRouterProvider){
+angular.module('fitGlows', [])
+  // .config(function($stateProvider, $urlRouterProvider){
 
     // $urlRouterProvider.when('', '/')
 
@@ -8,4 +8,4 @@ angular.module('fitGlows', ['ui.router'])
     //     url: '/',
     //     templateUrl: 'views/startPage.html',
     //   })
-  })
+  
