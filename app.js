@@ -1,11 +1,12 @@
 angular.module('fitGlows', [])
-  // .config(function($stateProvider, $urlRouterProvider){
+  .config(function($stateProvider, $urlRouterProvider){
 
-    // $urlRouterProvider.when('', '/')
+    $urlRouterProvider.when('', '/')
 
-    // $stateProvider
-    //   .state('start', {
-    //     url: '/',
-    //     templateUrl: 'views/startPage.html',
-    //   })
-  
+    $stateProvider
+      .state('yes', {
+        url: '/accountLookup',
+        templateUrl: './views/accountLookup.html',
+        controller: './js/controllers/accountLookupController.js'
+      })
+  })

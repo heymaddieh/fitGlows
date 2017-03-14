@@ -12,9 +12,17 @@ angular.module('fitGlows', []);
 //   })
 'use strict';
 
+angular.module('fitGlows').directive('haveAnAcc', function () {
+  return {
+    restrict: 'EA',
+    templateUrl: './js/directives/views/haveAnAcc.html'
+  };
+});
+'use strict';
+
 angular.module('fitGlows').directive('startPage', function () {
   return {
     restrict: 'E',
-    templateUrl: './js/directives/startPage.html'
+    templateUrl: './js/directives/views/startPage.html'
   };
 });
