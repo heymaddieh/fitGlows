@@ -90,10 +90,10 @@ input, select {
   box-sizing: border-box; }
 
 @import url("https://fonts.googleapis.com/css?family=Economica:400,400i,700,700i|Oswald:200,300,400,500,600,700|Crushed");
-.background {
+.background, .background1 {
   width: 100%;
   height: 100vh;
-  background-color: #88bcbc;
+  background: linear-gradient(#88BCBC, #B7D7D7);
   display: flex;
   align-content: center;
   flex-direction: column; }
@@ -147,7 +147,7 @@ img.blender {
 .dumbell {
   width: 150px; }
 
-.firstThingsHeader {
+.firstThingsHeader, .firstThingsHeader2 {
   width: 100%;
   height: 150px;
   border-top: 6px solid white;
@@ -155,7 +155,7 @@ img.blender {
   font-family: 'Crushed';
   font-size: 65px;
   text-align: center;
-  color: #e4d955;
+  color: #CC4A4A;
   margin-top: 15px; }
 
 .optionBackgroundContainer {
@@ -192,6 +192,75 @@ img.blender {
   border-radius: 10%;
   font-size: 23px; }
 
+a.accountOptions:link {
+  text-decoration: none; }
+
 .accountOptions:hover {
   border: 4px solid #CC4A4A;
+  color: #CC4A4A; }
+
+.accountLookupText {
+  font-family: Crushed;
+  font-size: 34px;
+  margin-top: 23px;
+  text-align: center; }
+
+.googleLoginContainer {
+  width: 300px;
+  height: 337px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 61px; }
+
+.googleLogin {
+  width: 160px;
+  height: 70px;
+  border: 4px solid #CC4A4A; }
+
+.loginGoogleText {
+  font-family: Crushed;
+  font-size: 23px;
+  padding-left: 20px;
+  padding-right: 25px;
+  margin-top: 70px; }
+
+.thatsOkay {
+  font-family: Crushed;
+  font-size: 23px;
+  margin-top: 10px; }
+
+.yourEmail {
+  text-align: center;
+  font-family: Crushed;
+  font-size: 23px;
+  margin-top: 50px; }
+
+.emailInputContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .emailInputContainer input {
+    margin-top: 25px;
+    width: 155px;
+    height: 32px;
+    background: transparent;
+    border: 2px solid black;
+    border-radius: 6%;
+    font-family: Crushed;
+    font-size: 20px;
+    text-align: center; }
+  .emailInputContainer button {
+    font-family: Crushed;
+    font-size: 15px;
+    border: 2px solid black;
+    background: transparent;
+    margin-top: 15px;
+    border-radius: 6%; }
+
+.background1 {
+  background: linear-gradient(#B7D7D7, white); }
+
+.firstThingsHeader2 {
   color: #CC4A4A; }
