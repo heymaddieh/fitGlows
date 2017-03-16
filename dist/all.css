@@ -156,20 +156,24 @@ img.blender {
   font-size: 65px;
   text-align: center;
   color: #CC4A4A;
-  margin-top: 15px; }
+  margin-top: 15px;
+  padding-top: 8px;
+  padding-left: 9px; }
 
 .optionBackgroundContainer {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   width: 100%;
-  height: 100vh; }
+  height: 100vh;
+  flex-direction: column;
+  align-items: center; }
 
 .optionBackground {
   width: 300px;
   height: 450px;
   background: #B7D7D7;
   border-radius: 3%;
-  margin-top: 21px;
+  margin-top: -10px;
   display: flex;
   flex-direction: column;
   align-items: center; }
@@ -193,11 +197,17 @@ img.blender {
   font-size: 23px; }
 
 a.accountOptions:link {
+  color: inherit;
+  text-decoration: none; }
+
+a:visited {
+  color: inherit;
   text-decoration: none; }
 
 .accountOptions:hover {
-  border: 4px solid #CC4A4A;
-  color: #CC4A4A; }
+  background-color: #E4D955;
+  color: white;
+  padding-bottom: 10px; }
 
 .accountLookupText {
   font-family: Crushed;
@@ -264,3 +274,23 @@ a.accountOptions:link {
 
 .firstThingsHeader2 {
   color: #CC4A4A; }
+
+.beforeStarted {
+  font-family: Crushed;
+  letter-spacing: 3px;
+  font-size: 25px;
+  text-align: center;
+  margin: 20px 12px 20px 12px;
+  line-height: 30px; }
+
+.okButton {
+  height: 50px;
+  width: 50px;
+  background: #B7D7D7;
+  color: #CC4A4A;
+  border-radius: 50%;
+  border: 2px solid #CC4A4A;
+  font-family: Crushed;
+  font-size: 20px;
+  margin-bottom: 15px;
+  outline: none; }

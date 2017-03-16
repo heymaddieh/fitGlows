@@ -19,6 +19,10 @@ angular.module('fitGlows', ['ui.router']).config(function ($stateProvider, $urlR
     url: '/accountLookup',
     templateUrl: './views/accountLookup.html',
     controller: 'lookupCtrl'
+  }).state('beforeWeGetStarted', {
+    url: '/beforeWeGetStarted',
+    templateUrl: './views/beforeGetStarted.html',
+    controller: 'beforeGetStartedCtrl'
   });
 });
 'use strict';
@@ -26,6 +30,8 @@ angular.module('fitGlows', ['ui.router']).config(function ($stateProvider, $urlR
 angular.module('fitGlows').controller('loginCtrl', function ($scope, lookupServ) {
   // $scope.test = "Controller is working";
   // $scope.test1 = lookupServ.test;
+
+
 });
 'use strict';
 
@@ -38,8 +44,12 @@ angular.module('fitGlows').controller('signupCtrl', function ($scope, signupServ
 });
 'use strict';
 
+angular.module('fitGlows').controller('beforeGetStartedCtrl', function ($scope, beforeGetStartedSrv) {});
+'use strict';
+
 angular.module('fitGlows').service('lookupServ', function () {
   // this.test = "Service is working";
+
 });
 'use strict';
 
@@ -49,6 +59,9 @@ angular.module('fitGlows').service('accountLookupSrv', function () {});
 angular.module('fitGlows').service('signupServ', function () {
   // this.test = 'Service is working'
 });
+'use strict';
+
+angular.module('fitGlows').service('beforeGetStartedSrv', function () {});
 'use strict';
 
 angular.module('fitGlows').directive('haveAnAcc', function () {

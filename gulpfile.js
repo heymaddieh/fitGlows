@@ -6,7 +6,7 @@ var babel = require('gulp-babel')
 gulp.task('sass', function(){
   gulp.src([
     './style/reset/reset.css',
-    './style/main.scss',
+    './style/*.scss',
     // './styles/**/*.scss
   ])
  .pipe(sass().on('error', sass.logError))

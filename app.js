@@ -26,4 +26,10 @@ angular.module('fitGlows', ['ui.router'])
         templateUrl: './views/accountLookup.html',
         controller: 'lookupCtrl'
       })
+
+      .state('beforeWeGetStarted', {
+        url: '/beforeWeGetStarted',
+        templateUrl: './views/beforeGetStarted.html',
+        controller: 'beforeGetStartedCtrl'
+      })
   })
