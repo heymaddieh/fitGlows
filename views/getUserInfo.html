@@ -1,0 +1,90 @@
+<div class="background">
+  <header class="firstThingsHeader"> Let's Get Started!
+  </header>
+
+  <div class="optionBackgroundContainer">
+    <div class="userInfoBackground">
+      <div class="submitUserInfoContainer">
+      <form action="" class="userInputInfo">
+        <div class="userInfoContainer">
+
+        <ol>
+          <li id="sex">Sex:
+            <br>
+            <ul class="genderRadioContainer">
+              <li class="genderRadio"><input type="radio" name="sexRadio" id="mRadio" value="male" ng-model="input.sexM">
+                <label for="mRadio">Male</label></li>
+              <li class="genderRadio"><input ng-model="input.sexF" type="radio"  name='sexRadio' id="fRadio" value="female">
+                <label for="fRadio">Female</label></li>
+            </ul>
+          </li>
+
+
+          <li id="height">Height:
+            <div class="heightContainer">
+              <div class="heightInputContainer">
+                <label for="heightFt">
+                  <input type="number" id="heightFt" ng-model="input.heightFt">Ft
+                </label>
+                <label for="heightIn">
+                <input ng-model="input.heightInch" type="number" id="heightIn">In
+                  </label>
+              </div>
+            </div>
+          </li>
+
+          <li id="weight">Weight:
+            <div>
+              <label for="weightLbs">
+              <input type="number" id="weightLbs" ng-model="input.weight">
+                Lbs</label>
+            </div>
+          </li>
+
+          <li id="age">Age:
+            <div>
+              <input type="number" id="ageYrs" ng-model="input.age">
+            </div>
+          </li>
+
+          <li id="wasit">Waist Measurement: 
+            <div class='infoDiv'>
+              <i class="fa fa-question-circle" aria-hidden="true"></i>
+              <label for="WaistIn">
+              <input type="number" id="waistIn" ng-model="input.waist">
+                In</label>
+            </div>
+          </li>
+
+         <div><li id="hip">Hip Measurement: 
+            <div class='infoDiv'>
+            <i class="fa fa-question-circle" aria-hidden="true"></i>
+              <label for="hipIn">
+              <input type="number" id="hipIn" ng-model="input.hip">
+                In</label>
+            </div>
+          </li>
+          
+          <li id="illiac">Illiac Crest Measurement: 
+            <div class='infoDiv'>
+              <i class="fa fa-question-circle" aria-hidden="true"></i>
+              <label for="illiacIn">
+              <input type="number" id="illiacIn" ng-model="input.illiac">
+                
+                In   <b>**Males Only**</b></label>
+            </div>
+
+          </li>
+
+        </ol>
+        </div>
+        <div class="submitButtonContainer">
+          <button class=submitButton ng-click="calculate(input)" >Calculate!</button>
+
+        
+        </div>
+      </form>
+        </div>
+    </div>
+  </div>
+</div>

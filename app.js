@@ -32,4 +32,10 @@ angular.module('fitGlows', ['ui.router'])
         templateUrl: './views/beforeGetStarted.html',
         controller: 'beforeGetStartedCtrl'
       })
+
+      .state('getUserInfo', {
+        url: '/userInfo',
+        templateUrl: './views/getUserInfo.html',
+        controller: 'userInfoCtrl'
+      })
   })
