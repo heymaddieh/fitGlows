@@ -1,9 +1,13 @@
-angular.module('fitGlows').controller('userInfoCtrl', function($scope, userInfoSrv){
+angular.module('fitGlows').controller('userInfoCtrl', function($scope, calcSrv, dataSrv){
   //console.log('hi')
   $scope.calculate = function(input){
-    console.log('click')
-      console.log(input);
+    $scope.userInfo = calcSrv.bodyFatPercentage(input)
+    console.log($scope.userInfo);
+
+    dataSrv.postAfterCalc($scope.userInfo).then(function(response){
+      console.log(response);
+    });
   }
- 
+  
   
 })

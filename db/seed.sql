@@ -9,7 +9,9 @@ age int,
 hip_cm int,
 waist_cm int,
 illiac_cm int,
+bmi int,
+bf_perc int,
 google_id int);
 
-insert into user_input(sex, weight_kg, height_cm, age, hip_cm, waist_cm) 
-values ('female', 57.6, 165.1, 21, 88.9, 63.5);
+-- insert into user_input(sex, weight_kg, height_cm, age, hip_cm, waist_cm, illiac_cm) 
+-- values ('female', 57.6, 165.1, 21, 88.9, 63.5);

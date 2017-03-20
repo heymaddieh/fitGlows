@@ -5,17 +5,21 @@
   <div class="optionBackgroundContainer">
     <div class="userInfoBackground">
       <div class="submitUserInfoContainer">
-      <form action="" class="userInputInfo">
+      <form action="{{calculate}}" class="userInputInfo">
         <div class="userInfoContainer">
 
         <ol>
           <li id="sex">Sex:
             <br>
             <ul class="genderRadioContainer">
-              <li class="genderRadio"><input type="radio" name="sexRadio" id="mRadio" value="male" ng-model="input.sexM">
-                <label for="mRadio">Male</label></li>
-              <li class="genderRadio"><input ng-model="input.sexF" type="radio"  name='sexRadio' id="fRadio" value="female">
-                <label for="fRadio">Female</label></li>
+              <li class="genderRadio">
+                <input type="radio" name="sexRadio" id="mRadio" value="male" ng-model="input.sexM">
+                <label for="mRadio">Male</label>
+              </li>
+              <li class="genderRadio">
+                <input ng-model="input.sexF" type="radio"  name='sexRadio' id="fRadio" value="female">
+                <label for="fRadio">Female</label>
+              </li>
             </ul>
           </li>
 
