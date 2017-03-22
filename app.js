@@ -38,4 +38,33 @@ angular.module('fitGlows', ['ui.router'])
         templateUrl: './views/getUserInfo.html',
         controller: 'userInfoCtrl'
       })
+
+      .state('bfPerc', {
+        url: '/yourResults',
+        templateUrl: './views/bodyFatPerc.html',
+        controller: 'userInfoCtrl'
+      })
+
+      .state('setGoals', {
+        url: '/letsSetGoals',
+        templateUrl: './views/setGoals.html',
+        controller: 'setGoalsCtrl'
+      })
+
+      .state('welcome', {
+        url: '/welcome',
+        templateUrl: './views/welcome.html'
+      })
+
+      .state('warmUp', {
+        url: '/warmUp',
+        templateUrl: './views/warmUp.html',
+        controller: 'warmUpCtrl'
+      })
+
+      .state('workout', {
+        url: '/workout',
+        templateUrl: './views/workout.html',
+        // controller: 'workoutCtrl'
+      })
   })

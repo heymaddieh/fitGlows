@@ -1,9 +1,15 @@
+
+$blue_background: #88BCBC;
+$light_blue_background: #B7D7D7;
+$red_pink: #CC4A4A;
+$yellow_color: #E4D955;
+$main_font: Crushed;
 // Main Page
 
   .background {
     width: 100%;
     height: 100vh;
-    background: linear-gradient(#88BCBC, #B7D7D7);
+    background: linear-gradient($blue_background, $light_blue_background);
     display: flex;
     align-content: center;
     flex-direction: column;
@@ -15,7 +21,7 @@
     display: flex;
     align-items: flex-end;
   }
-  .muscleman{
+  #muscleman{
     width: 175px;
     z-index: 1;
     margin-top: 25px;
@@ -33,16 +39,16 @@
   #startText{
     margin-top: 27px;
     margin-bottom: 10px;
-    font-family: 'Crushed';
+    font-family: $main_font;
     font-size: 17pt;
   }
 
-  img.blender{
+  #blender{
     height: 17%;
     width: 87px;
     margin-top: 5px;
   }
-  .whiteBorder{
+  #whiteBorder{
     width: 100%;
     height: 282px;
     /* margin-top: 150px; */
@@ -51,7 +57,7 @@
     /* position: fixed; */
     text-align: center;
     font-family: 'Economica', sans-serif;
-    color: #CC4A4A;
+    color: $red_pink;
     font-size: 78px;
     font-weight: 700;
     line-height: 75px;
@@ -62,27 +68,26 @@
 
   }
 
-  .dumbell{
+  #dumbell{
     width: 150px;
   }
 
 // First things first
-  .firstThingsHeader{
-   width: 100%;
+  #firstThingsHeader{
+    width: 100%;
     height: 150px;
     border-top: 6px solid white;
     border-bottom: 6px solid white;
-    font-family: 'Crushed';
+    font-family: $main_font;
     font-size: 65px;
     text-align: center;
-    color: #CC4A4A;
+    color: $red_pink;
     margin-top: 15px;
     padding-top: 8px;
     padding-left: 9px;
   }
-  .optionBackgroundContainer{
+  #optionBackgroundContainer{
     display: flex;
-    justify-content: space-around;
     width: 100%;
     height: 100vh;
     flex-direction: column;
@@ -90,18 +95,19 @@
   }
   .optionBackground{
     width: 300px;
-    height: 450px;
-    background: #B7D7D7;
+    height: 440px;
+    background: $light_blue_background;
     border-radius: 3%;
-    margin-top: -10px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: scroll;
   }
 
   .textInOption{
     font-size: 35px;
-    font-family: 'Crushed';
+    font-family: $main_font;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 14px;
@@ -112,10 +118,10 @@
     height: 45px;
     text-align: center;
     margin: 25px;
-    font-family: Crushed;
+    font-family: $main_font;
     background-color: #A8A8A8;
     padding-top: 12px;
-    border-radius: 10%;
+    border-radius: 10px;
     font-size: 23px;
 
   }
@@ -130,7 +136,7 @@
     }
 
   .accountOptions:hover{
-    background-color: #E4D955;
+    background-color: $yellow_color;
     color: white;
     padding-bottom: 10px;
   
@@ -138,7 +144,7 @@
 
 // YES I HAVE AN ACCOUNT
   .accountLookupText{
-    font-family: Crushed;
+    font-family: $main_font;
     font-size: 34px;
     margin-top: 23px;
     text-align: center;
@@ -157,12 +163,12 @@
   .googleLogin{
     width: 160px;
     height: 70px;
-    border: 4px solid #CC4A4A;
+    border: 4px solid $red_pink;
     
   }
 
   .loginGoogleText{
-    font-family: Crushed;
+    font-family: $main_font;
     font-size: 23px;
     padding-left: 20px;
     padding-right: 25px;
@@ -170,14 +176,14 @@
   }
 
   .thatsOkay{
-    font-family: Crushed;
+    font-family: $main_font;
     font-size: 23px;
     margin-top: 10px;
   }
 
   .yourEmail{
     text-align: center;
-    font-family: Crushed;
+    font-family: $main_font;
     font-size: 23px;
     margin-top: 50px;
 
@@ -196,13 +202,13 @@
       background: transparent;
       border: 2px solid black;
       border-radius: 6%;
-      font-family: Crushed;
+      font-family: $main_font;
       font-size: 20px;
       text-align: center;
     }
 
     button{
-      font-family: Crushed;
+      font-family: $main_font;
       font-size: 15px;
       border: 2px solid black;
       background: transparent;
@@ -213,18 +219,20 @@
 
   .background1{
     @extend .background;
-    background: linear-gradient(#B7D7D7, white);
+    background: linear-gradient($light_blue_background, white);
+    display: flex;
+    align-items: center;
     
   }
 
   .firstThingsHeader2{
-    @extend .firstThingsHeader;
-    color: #CC4A4A;
+    @extend #firstThingsHeader;
+    color: $red_pink;
   }
 
 //Before we get started
   .beforeStarted{
-    font-family: Crushed;
+    font-family: $main_font;
     letter-spacing: 3px;
     font-size: 25px;
     text-align: center;
@@ -235,11 +243,11 @@
   .okButton{
     height: 50px;
     width: 50px;
-    background: #B7D7D7;
-    color: #CC4A4A;
+    background: $light_blue_background;
+    color: $red_pink;
     border-radius: 50%;
-    border: 2px solid #CC4A4A;
-    font-family: Crushed;
+    border: 2px solid $red_pink;
+    font-family: $main_font;
     font-size: 20px;
     margin-bottom: 15px;
     outline: none;
@@ -253,7 +261,7 @@
   .userInfoBackground{
     width: 85vw;
     height: 69vh;
-    background: #B7D7D7;
+    background: $light_blue_background;
     border-radius: 3%;
     margin-top: -10px;
     display: flex;
@@ -263,7 +271,7 @@
   }
 
   .userInputInfo{
-    font-family: Crushed;
+    font-family: $main_font;
     font-size: 32px;
     height: inherit;
     width: inherit;
@@ -309,7 +317,7 @@
     
     }
     i:hover{
-      color: #CC4A4A;
+      color: $red_pink;
     }
   }
 
@@ -328,19 +336,279 @@
   background: none;
   border: 3px solid black;
   margin: 20px;
-  font-family: Crushed;
+  font-family: $main_font;
   font-size: 20px;
   text-align: center;
   font-weight: bold;
 }
 
 .submitButton:hover{
-  background-color: #E4D955;
+  background-color: $yellow_color;
   color: white;
   border:none;
 }
 
+//BF%
 
+  .bodyFatPercHeader{
+    @extend #firstThingsHeader;
+    font-size: 111px;
+  }
+
+  .bfContainer{
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bfPercBackground{
+    width: 90vw;
+    background: #B4D5D5;
+    border-radius: 20px;
+  }
+
+  .bfPercText{
+    // font-family: $main_font;
+    // font-size: 100px;
+    height: inherit;
+    text-align: center;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: $main_font;
+
+    p{
+      font-family: $main_font;
+      font-size: 25px;
+    }
+
+    h1{
+      font-family: $main_font;
+      font-size: 100px;
+    }
+
+    #bfPercInfo{
+      height: 40vh;
+      width: 90%;
+      background: $light_blue_background;
+      word-wrap: break-word;
+      margin-top: 28px;
+      text-align: left;
+      padding: 7px;
+      overflow: scroll;
+      /* border: 1px solid grey; */
+      border-radius: 10px;
+      line-height: 35px;
+      font-family: $main_font;
+      font-size: 27px;
+    }
+  }
+
+  .setGoalsButtonCont{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-family: $main_font;
+  }
+
+  .setGoalsButton{
+    height: 70px;
+    width: 133px;
+    background-color: transparent;
+    text-align: center;
+    border: 3px solid black;
+    border-radius: 10px;
+    line-height: 25px;
+    padding: 7px;
+    font-family: $main_font;
+    
+  }
+
+  .setGoalsButton:hover{
+    color: white;
+    background-color: $yellow_color;
+    border: 3px solid transparent;
+
+  }
+  //warm-up
+  .warmUpPage{
+    @extend .background;
+    display: flex;
+    align-items: center;
+    
+  }
+
+  #warmUpHeader{
+    @extend #firstThingsHeader;
+    height: 100px;
+    font-size: 48px;
+    padding-top: 15px;
+  }
+
+  #warmUpBackground{
+    width: 90vw;
+    height: 80vh;
+    background: $light_blue_background;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 20px;
+    align-items: center;
+    overflow: scroll;
+    margin-top: 15px;
+    margin-bottom: 54px;
+
+    h1{
+      text-decoration: underline;
+      font-family: $main_font;
+      text-align: center;
+      font-size: 55px;
+    }
+
+    p#warmUpInfo{
+      font-family: $main_font;
+      text-align: center;
+      line-height: 20px;
+      font-weight: bold;
+      padding: 10px 20px 10px 20px;
+    }
+  }
+
+  .warmUpList{
+    font-family: $main_font;
+    text-align: center;
+    padding-top: 10px;
+    list-style: none;
+    font-size: 38px;
+    line-height: 65px;
+  }
+
+  .letsWorkout{
+    text-align: center;
+    font-family: $main_font;
+    width: 180px;
+    height: 88px;
+    font-size: 38px;
+    text-decoration: none;
+    margin: 20px;
+    border: 3px solid black;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 5px;
+    
+    
+  }
+
+  .letsWorkout:hover{
+    background-color: $yellow_color;
+    border: 3px solid $yellow_color;
+    color: white;
+  }
+  // .workoutList{
+    
+  // }
+
+  .workOuts{
+    font-family: $main_font;
+    font-size: 30px;
+    margin: 10px;
+    
+  }
+  img#workoutImage{
+    width: 300px;
+    height: 182px;
+    margin: 10px 10px 10px -19px;
+    border: 3px solid black;
+    border-radius: 10px;
+  }
+
+  #workoutList{
+    width: 100%;
+    height: 100vh;
+    padding: 8px;
+    
+  }
+
+  #howMany{
+    font-family: $main_font;
+    font-size: 25px;
+  }
+
+  .breaks{
+    font-family: $main_font;
+    font-size: 30px;
+    margin: 50px 10px;
+    
+  }
+
+  p#takeBreak{
+    font-family: $main_font;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  img#workoutImageDoorPull{
+    @extend img#workoutImage;
+    width: 200px;
+    height: 300px;
+  }
+
+  iframe#workoutImage{
+    @extend img#workoutImage;
+  }
+
+  #welcomeBack{
+    font-family: $main_font;
+    font-size: 56px;
+    font-weight: normal;
+    text-align: center;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+  }
+
+  #readyToStart{
+    font-family: Crushed;
+    font-size: 30px;
+    text-align: center;
+    margin: 30px;
+  }
+
+  #readyMuscleman{
+    width: 50%;
+    margin-top: 35px;
+    
+  }
+  #yesLinkContainer{
+    display: flex;
+    justify-content: center;
+  }
+
+  #yesLink{
+    text-align: center;
+    font-family: $main_font;
+    font-size: 25px;
+    border: 3px solid black;
+    height: 50px;
+    width: 60px;
+    padding-top: 9px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+  }
+
+  #yesLink:hover{
+    border: 3px solid $yellow_color;
+    background-color: $yellow_color;
+    color: white;
+  }
+
+  
   
 
 

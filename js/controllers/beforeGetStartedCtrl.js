@@ -1,3 +1,3 @@
-angular.module('fitGlows').controller('beforeGetStartedCtrl', function($scope, beforeGetStartedSrv){
+angular.module('fitGlows').controller('beforeGetStartedCtrl', function($scope){
   
 })

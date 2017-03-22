@@ -27,8 +27,86 @@ angular.module('fitGlows', ['ui.router']).config(function ($stateProvider, $urlR
     url: '/userInfo',
     templateUrl: './views/getUserInfo.html',
     controller: 'userInfoCtrl'
+  }).state('bfPerc', {
+    url: '/yourResults',
+    templateUrl: './views/bodyFatPerc.html',
+    controller: 'userInfoCtrl'
+  }).state('setGoals', {
+    url: '/letsSetGoals',
+    templateUrl: './views/setGoals.html',
+    controller: 'setGoalsCtrl'
+  }).state('welcome', {
+    url: '/welcome',
+    templateUrl: './views/welcome.html'
+  }).state('warmUp', {
+    url: '/warmUp',
+    templateUrl: './views/warmUp.html',
+    controller: 'warmUpCtrl'
+  }).state('workout', {
+    url: '/workout',
+    templateUrl: './views/workout.html'
   });
 });
+'use strict';
+
+angular.module('fitGlows').controller('loginCtrl', function ($scope, $state) {
+  // $scope.test = "Controller is working";
+  // $scope.test1 = lookupServ.test;
+  $scope.warmUp = function () {
+    $state.go('warmUp');
+  };
+});
+'use strict';
+
+angular.module('fitGlows').controller('lookupCtrl', function ($scope, accountLookupSrv) {});
+'use strict';
+
+angular.module('fitGlows').controller('signupCtrl', function ($scope) {
+  // $scope.test = "Controller is working";
+  // $scope.test2 = signupServ.test;
+});
+'use strict';
+
+angular.module('fitGlows').controller('beforeGetStartedCtrl', function ($scope) {});
+'use strict';
+
+angular.module('fitGlows').controller('userInfoCtrl', function ($scope, calcSrv, dataSrv, $state) {
+  console.log('hi');
+  $scope.calculate = function (input) {
+    $scope.userInfo = calcSrv.bodyFatPercentage(input);
+    console.log($scope.userInfo);
+
+    dataSrv.postAfterCalc($scope.userInfo).then(function (response) {
+      // console.log(response);
+      $scope.bf = response;
+    });
+  };
+
+  $scope.changePage = function () {
+    $state.go('setGoals');
+  };
+  // $scope.test = 'test working';
+
+});
+'use strict';
+
+angular.module('fitGlows').controller('setGoalsCtrl', function ($scope) {
+  console.log('test is working');
+});
+'use strict';
+
+angular.module('fitGlows').controller('warmUpCtrl', function ($scope, $state) {
+
+  $scope.test = 'warm up Ctrl working';
+
+  // $scope.toWorkout = function() {
+  //     $state.go('workout')
+  //   }
+
+});
+'use strict';
+
+angular.module('fitGlows').controller('workoutCtrl', function ($scope) {});
 'use strict';
 
 angular.module('fitGlows').service('calcSrv', function () {
@@ -127,43 +205,10 @@ angular.module('fitGlows').service('dataSrv', function ($http) {
   this.postAfterCalc = function (userInfo) {
     return $http.post('/post_after_calc', userInfo).then(function (response) {
       if (response.status === 200) {
-        console.log(response);
+        // console.log(response)
         return response;
       }
       return "This is embarassing.";
-    });
-  };
-});
-'use strict';
-
-angular.module('fitGlows').controller('loginCtrl', function ($scope, lookupServ) {
-  // $scope.test = "Controller is working";
-  // $scope.test1 = lookupServ.test;
-
-
-});
-'use strict';
-
-angular.module('fitGlows').controller('lookupCtrl', function ($scope, accountLookupSrv) {});
-'use strict';
-
-angular.module('fitGlows').controller('signupCtrl', function ($scope, signupServ) {
-  // $scope.test = "Controller is working";
-  // $scope.test2 = signupServ.test;
-});
-'use strict';
-
-angular.module('fitGlows').controller('beforeGetStartedCtrl', function ($scope, beforeGetStartedSrv) {});
-'use strict';
-
-angular.module('fitGlows').controller('userInfoCtrl', function ($scope, calcSrv, dataSrv) {
-  //console.log('hi')
-  $scope.calculate = function (input) {
-    $scope.userInfo = calcSrv.bodyFatPercentage(input);
-    console.log($scope.userInfo);
-
-    dataSrv.postAfterCalc($scope.userInfo).then(function (response) {
-      console.log(response);
     });
   };
 });
