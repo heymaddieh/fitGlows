@@ -11,6 +11,23 @@ module.exports = {
         res.send('OK');
       }
     })
+  },
+
+  numWorkout: function(req, res, next){
+    //console.log(req.body)
+    db.workoutTable([req.body.numWallPush, req.body.numDoorPull, req.body.numDeadBugs, req.body.numWallHipHinge, req.body.numGluteBridges], function(err, data){
+      if(err){
+        return console.log(err);
+      } else {
+        db.getWoSummary(function(err, data){
+          if(err){
+            return console.log(err);
+          } else {
+            res.send(data[0])
+          }
+        })
+      }
+    })
   }
 }
 

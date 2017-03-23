@@ -65,6 +65,12 @@ angular.module('fitGlows', ['ui.router'])
       .state('workout', {
         url: '/workout',
         templateUrl: './views/workout.html',
-        // controller: 'workoutCtrl'
+        controller: 'workoutCtrl'
+      })
+
+      .state('workoutSummary', {
+        url: '/summary',
+        templateUrl: './views/summary.html',
+        controller: 'summaryCtrl'
       })
   })

@@ -1,6 +1,9 @@
 <div class="warmUpPage">
   <div class="animated fadeInDown" id="warmUpHeader">Let's have some fun!</div>
   <div id="warmUpBackground">
+    <form action="">
+      
+    
     <h1>WORK-OUT</h1>
     <p id="warmUpInfo">Instructions: Do each exercise until you can't do any more. Take a 30 second break between each exercise and record how
       many you did in the space provided. </p>
@@ -18,7 +21,7 @@
           <br>
           <div id="howMany">How many wall push ups did you do?
           </div>
-          <input type="number" name="numWallPush" value="numWallPush">
+          <input type="number" name="numWallPush"  ng-model="input.numWallPush1">
           <br>
           <br>
           <p id="takeBreak">Take a 30 second break! Drink some water, you're doing great!</p>
@@ -35,7 +38,7 @@
           <br>
           <div id="howMany">How many wall door pulls did you do?
           </div>
-          <input type="number" name="numDoorPull" value="numDoorPull">
+          <input type="number" name="numDoorPull"  ng-model="input.numDoorPull1">
           <br>
           <br>
           <p id="takeBreak">Take a 30 second break! Keep it up!</p>
@@ -52,7 +55,7 @@
           <br>
           <div id="howMany">How many wall dead bugs did you do?
           </div>
-          <input type="number" name="numDeadBugs" value="numDeadBugs">
+          <input type="number" name="numDeadBugs"  ng-model="input.numDeadBugs1">
           <br>
           <br>
           <p id="takeBreak">Take a 30 second break! Drink some water, and keep going!</p>
@@ -69,7 +72,7 @@
           <br>
           <div id="howMany">How many wall hip hinges did you do?
           </div>
-          <input type="number" name="numWallHipHinge" value="numWallHipHinge">
+          <input type="number" name="numWallHipHinge"  ng-model="input.numWallHipHinge1">
           <br>
           <br>
           <p id="takeBreak">Take a 30 second break! Drink some water, you're doing great!</p>
@@ -86,7 +89,7 @@
           <br>
           <div id="howMany">How many glute bridges did you do?
           </div>
-          <input type="number" name="numGluteBridges" value="numGluteBridges">
+          <input type="number" name="numGluteBridges"  ng-model="input.numGluteBridges1">
           <br>
           <br>
           <p id="takeBreak">Take a 30 second break! Drink some water, you're amazing!</p>
@@ -104,7 +107,7 @@
           <br>
           <div id="howMany">How many wall push ups did you do?
           </div>
-          <input type="number" name="numWallPush" value="numWallPush">
+          <input type="number" name="numWallPush"  ng-model="input.numWallPush2">
           <br>
           <br>
           <p id="takeBreak">Take a 30 second break! Drink some water, you're doing great!</p>
@@ -121,7 +124,7 @@
           <br>
           <div id="howMany">How many wall door pulls did you do?
           </div>
-          <input type="number" name="numDoorPull" value="numDoorPull">
+          <input type="number" name="numDoorPull"  ng-model="input.numDoorPull2">
           <br>
           <br>
           <p id="takeBreak">Take a 30 second break! Keep it up!</p>
@@ -138,7 +141,7 @@
             <br>
             <div id="howMany">How many wall dead bugs did you do?
             </div>
-            <input type="number" name="numDeadBugs" value="numDeadBugs">
+            <input type="number" name="numDeadBugs"  ng-model="input.numDeadBugs2">
             <br>
             <br>
             <p id="takeBreak">Take a 30 second break! Drink some water, and keep going!</p>
@@ -155,7 +158,7 @@
           <br>
           <div id="howMany">How many wall hip hinges did you do?
           </div>
-          <input type="number" name="numWallHipHinge" value="numWallHipHinge">
+          <input type="number" name="numWallHipHinge"  ng-model="input.numWallHipHinge2">
           <br>
           <br>
           <p id="takeBreak">Take a 30 second break! Drink some water, you're doing great!</p>
@@ -172,7 +175,7 @@
           <br>
           <div id="howMany">How many glute bridges did you do?
           </div>
-          <input type="number" name="numGluteBridges" value="numGluteBridges">
+          <input type="number" name="numGluteBridges"  ng-model="input.numGluteBridges2">
           <br>
           <br>
           <p id="takeBreak">Take a 30 second break! Drink some water, you're amazing!</p>
@@ -190,7 +193,7 @@
           <br>
           <div id="howMany">How many wall push ups did you do?
           </div>
-          <input type="number" name="numWallPush" value="numWallPush">
+          <input type="number" name="numWallPush"  ng-model="input.numWallPush3">
           <br>
           <br>
           <p id="takeBreak">Take a 30 second break! Drink some water, you're doing great!</p>
@@ -207,7 +210,7 @@
           <br>
           <div id="howMany">How many wall door pulls did you do?
           </div>
-          <input type="number" name="numDoorPull" value="numDoorPull">
+          <input type="number" name="numDoorPull"  ng-model="input.numDoorPull3">
           <br>
           <br>
           <p id="takeBreak">Take a 30 second break! Keep it up!</p>
@@ -216,28 +219,32 @@
       <!--////////////////////-->
       <li class="workOuts">Dead Bugs
         <div>
-            <iframe id="workoutImage" src="https://www.youtube.com/embed/H7KsymxoCc0" frameborder="0"></iframe>
-          </div>
-        </li>
-      <li class="breaks">Break
-          <div>
-            <br>
-            <div id="howMany">How many wall dead bugs did you do?
-            </div>
-            <input type="number" name="numDeadBugs" value="numDeadBugs">
-            <br>
-            <br>
-            <p id="takeBreak">Take a 30 second break! Drink some water, and keep going!</p>
-          </div>
+          <iframe id="workoutImage" src="https://www.youtube.com/embed/H7KsymxoCc0" frameborder="0"></iframe>
+        </div>
       </li>
-      <!--////////////////////-->
-      <li class="workOuts">Wall Hip Hinges</li>
       <li class="breaks">Break
         <div>
           <br>
-          <div id="howMany">How many wall push ups did you do?
+          <div id="howMany">How many wall dead bugs did you do?
           </div>
-          <input type="number" name="numWallPush" value="numWallPush">
+          <input type="number" name="numDeadBugs"  ng-model="input.numDeadBugs3">
+          <br>
+          <br>
+          <p id="takeBreak">Take a 30 second break! Drink some water, and keep going!</p>
+        </div>
+      </li>
+      <!--////////////////////-->
+      <li class="workOuts">Wall Hip Hinges
+        <div>
+          <img id="workoutImage" src="./style/pics/wallHipHinge.png">
+        </div>
+      </li>
+      <li class="breaks">Break
+        <div>
+          <br>
+          <div id="howMany">How many wall hip hinges did you do?
+          </div>
+          <input type="number" name="numWallHipHinge"  ng-model="input.numWallHipHinge3">
           <br>
           <br>
           <p id="takeBreak">Take a 30 second break! Drink some water, you're doing great!</p>
@@ -254,16 +261,16 @@
           <br>
           <div id="howMany">How many glute bridges did you do?
           </div>
-          <input type="number" name="numGluteBridges" value="numGluteBridges">
+          <input type="number" name="numGluteBridges"  ng-model="input.numGluteBridges3">
           <br>
           <br>
           <p id="takeBreak">Take a 30 second break! Drink some water, you're amazing!</p>
         </div>
       </li>
 
-      <a class="letsWorkout">Finished!</a>
+      <button ui-sref="workoutSummary" class="letsWorkout" type="submit" ng-click="numWorkout(input)">Finished!</button>
     </ol>
-
+  </form> 
   </div>
 
 </div>

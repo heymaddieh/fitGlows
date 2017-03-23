@@ -23,7 +23,8 @@ db.seed(function(err){
 }) 
 
 
-app.post('/post_after_calc', serverCtrl.saveUserInput)
+app.post('/post_after_calc', serverCtrl.saveUserInput);
+app.post('/num_workout', serverCtrl.numWorkout);
 
 app.listen(port, function(){
   console.log('listening on port', port)

@@ -9,5 +9,15 @@ angular.module('fitGlows').service('dataSrv', function($http){
       return "This is embarassing."
     })
   }
+
+  this.numWorkout = function(input){
+   // console.log(input)
+    return $http.post('/num_workout', input).then(function(response){
+      if(response.status === 200){
+        return response;
+      }
+      return "uh oh"
+    })
+  }
   
 })

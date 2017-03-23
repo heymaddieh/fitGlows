@@ -1,6 +1,6 @@
 
-$blue_background: #88BCBC;
-$light_blue_background: #B7D7D7;
+$blue_background: #6E9E9E;
+$light_blue_background: #9DC3C3;
 $red_pink: #CC4A4A;
 $yellow_color: #E4D955;
 $main_font: Crushed;
@@ -94,8 +94,8 @@ $main_font: Crushed;
     align-items: center;
   }
   .optionBackground{
-    width: 300px;
-    height: 440px;
+    width: 74vw;
+    height: 70vh;
     background: $light_blue_background;
     border-radius: 3%;
     margin-top: 20px;
@@ -263,7 +263,7 @@ $main_font: Crushed;
     height: 69vh;
     background: $light_blue_background;
     border-radius: 3%;
-    margin-top: -10px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center; 
@@ -608,8 +608,68 @@ $main_font: Crushed;
     color: white;
   }
 
-  
-  
+  @media(min-width: 398px){
+    .firstThingsHeader2{
+      height: 104px;
+    }
+  }
 
+  @media(min-width: 750px){
+    #whiteBorder{
+      font-size: 109px;
+      line-height: 99px;
+      padding-top: 48px;
+    }
+
+    .musclemanContainer {
+      margin-top: 40px;
+    
+    }
+
+    #muscleman{
+      width: 234px;
+      margin-top: 0px;
+      margin-left: 80px;
+    }
+
+    #blender {
+      height: 21%;
+      width: 97px;
+      margin-top: 22px;
+    }
+
+    .firstThingsHeader2{
+      font-size: 98px;
+      height: 150px;
+      
+    }
+
+    .optionBackground {
+      width: 400px;
+      margin-top: 30px;
+      padding-top: 31px;
+    }
+
+    #firstThingsHeader{
+      font-size: 98px;
+      height: 150px;
+    }
+
+    .googleLoginContainer {
+      margin-left: 45px;
+    }
+
+    .accountLookupText {
+      font-family: Crushed;
+      font-size: 45px;
+      margin-top: 25px;
+      text-align: center;
+    }
+
+    #welcomeBack{
+      font-size: 79px;
+    }
+
+  }
 
 

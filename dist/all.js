@@ -44,7 +44,12 @@ angular.module('fitGlows', ['ui.router']).config(function ($stateProvider, $urlR
     controller: 'warmUpCtrl'
   }).state('workout', {
     url: '/workout',
-    templateUrl: './views/workout.html'
+    templateUrl: './views/workout.html',
+    controller: 'workoutCtrl'
+  }).state('workoutSummary', {
+    url: '/summary',
+    templateUrl: './views/summary.html',
+    controller: 'summaryCtrl'
   });
 });
 'use strict';
@@ -95,6 +100,9 @@ angular.module('fitGlows').controller('setGoalsCtrl', function ($scope) {
 });
 'use strict';
 
+angular.module('fitGlows').controller('summaryCtrl', function ($scope, $rootScope) {});
+'use strict';
+
 angular.module('fitGlows').controller('warmUpCtrl', function ($scope, $state) {
 
   $scope.test = 'warm up Ctrl working';
@@ -106,7 +114,23 @@ angular.module('fitGlows').controller('warmUpCtrl', function ($scope, $state) {
 });
 'use strict';
 
-angular.module('fitGlows').controller('workoutCtrl', function ($scope) {});
+angular.module('fitGlows').controller('workoutCtrl', function ($scope, dataSrv, $rootScope) {
+
+  $scope.numWorkout = function (input) {
+    // console.log(input);
+    var addedWorkouts = {
+      numWallPush: input.numWallPush1 + input.numWallPush2 + input.numWallPush3,
+      numDoorPull: input.numDoorPull1 + input.numDoorPull2 + input.numDoorPull3,
+      numDeadBugs: input.numDeadBugs1 + input.numDeadBugs2 + input.numDeadBugs3,
+      numWallHipHinge: input.numWallHipHinge1 + input.numWallHipHinge2 + input.numWallHipHinge3,
+      numGluteBridges: input.numGluteBridges1 + input.numGluteBridges2 + input.numGluteBridges3
+    };
+    dataSrv.numWorkout(addedWorkouts).then(function (response) {
+      console.log(response.data);
+      $rootScope.summary = response.data;
+    });
+  };
+});
 'use strict';
 
 angular.module('fitGlows').service('calcSrv', function () {
@@ -209,6 +233,16 @@ angular.module('fitGlows').service('dataSrv', function ($http) {
         return response;
       }
       return "This is embarassing.";
+    });
+  };
+
+  this.numWorkout = function (input) {
+    // console.log(input)
+    return $http.post('/num_workout', input).then(function (response) {
+      if (response.status === 200) {
+        return response;
+      }
+      return "uh oh";
     });
   };
 });
