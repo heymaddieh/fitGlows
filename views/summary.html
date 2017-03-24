@@ -1,10 +1,14 @@
 <div class="warmUpPage">
   <header class="animated fadeInDown" id="warmUpHeader">You finished!</header>
   <div id="warmUpBackground">
-    <div id="summaryText">
-      Summary goes here
-      {{summary}}
-      {{summary.glutebridges}}
+    <div class="animated fadeInUp summaryText">
+      <ul id="summaryListContainer"> Here is your workout summary!
+        <li class="summaryList">Wall Pushups: <b>{{summary.wallpushups}}</b></li>
+        <li class="summaryList">Door Pulls: <b>{{summary.doorpulls}}</b></li>
+        <li class="summaryList">Dead Bugs: <b>{{summary.deadbugs}}</b></li>
+        <li class="summaryList">Wall Hip Hinges: <b>{{summary.wallhiphinges}}</b></li>
+        <li class="summaryList">Glute Bridges: <b>{{summary.glutebridges}}</b></li>
+      </ul>
     </div>
   </div>
 </div>
