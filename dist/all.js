@@ -36,8 +36,11 @@ angular.module('fitGlows', ['ui.router']).config(function ($stateProvider, $urlR
     templateUrl: './views/setGoals.html',
     controller: 'setGoalsCtrl'
   }).state('welcome', {
-    url: '/welcome',
+    url: '/welcomeBack',
     templateUrl: './views/welcome.html'
+  }).state('welcomeTo', {
+    url: '/welcome',
+    templateUrl: './views/welcomeTo.html'
   }).state('warmUp', {
     url: '/warmUp',
     templateUrl: './views/warmUp.html',

@@ -1,5 +1,4 @@
-drop table if exists user_input;
-drop table if exists workouts;
+drop table if exists user_input, workouts;
 
 create table user_input(
 id SERIAL PRIMARY KEY,
@@ -21,18 +20,16 @@ create table workouts(
   deadBugs varchar(40),
   wallHipHinges varchar(40),
   gluteBridges varchar(40),
-  userId integer
+  userId integer references user_input(id)
   );
 
 
--- SELECT user_input.id, workouts.userId
--- FROM user_input
--- INNER JOIN workouts ON user_input.id=workouts.userId;
+
 
 
 
 insert into user_input(sex, weight_kg, height_cm, age, hip_cm, waist_cm, illiac_cm) 
 values ('female', 57.6, 165.1, 21, 88.9, 63.5, null);
 
-insert into workouts(wallPushups, doorPulls, deadBugs, wallHipHinges, gluteBridges)
-values ('73', '89', '68', '39', '74');
+insert into workouts(wallPushups, doorPulls, deadBugs, wallHipHinges, gluteBridges, userId)
+values ('73', '89', '68', '39', '74', 1);

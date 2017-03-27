@@ -382,6 +382,9 @@ li.genderRadio {
   color: white;
   border: none; }
 
+.bodyFatPercHeader {
+  font-size: 88px; }
+
 .bfContainer {
   width: inherit;
   height: inherit;
@@ -396,7 +399,7 @@ li.genderRadio {
   border-radius: 20px; }
 
 .bfPercText {
-  height: inherit;
+  height: 70vh;
   text-align: center;
   padding-top: 10px;
   display: flex;
@@ -443,6 +446,8 @@ li.genderRadio {
   border-radius: 10px;
   line-height: 25px;
   padding: 7px;
+  text-decoration: none;
+  font-weight: bold;
   font-family: Crushed; }
 
 .setGoalsButton:hover {
@@ -555,7 +560,7 @@ img#workoutImageDoorPull {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 30px; }
+  margin: 0 30px; }
 
 #readyToStart {
   font-family: Crushed;
@@ -614,7 +619,10 @@ img#workoutImageDoorPull {
     width: 300px; }
   #muscleman1 {
     width: 235px;
-    margin: 40px; } }
+    margin: 40px; }
+  .bodyFatPercHeader {
+    height: 93px;
+    font-size: 114px; } }
 
 @media (min-width: 750px) {
   #whiteBorder {

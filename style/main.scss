@@ -370,7 +370,7 @@ $main_font: Crushed;
 
   .bodyFatPercHeader{
     @extend #firstThingsHeader;
-    // font-size: 111px;
+    font-size: 88px
   }
 
   .bfContainer{
@@ -391,7 +391,7 @@ $main_font: Crushed;
   .bfPercText{
     // font-family: $main_font;
     // font-size: 100px;
-    height: inherit;
+    height: 70vh;
     text-align: center;
     padding-top: 10px;
     display: flex;
@@ -439,7 +439,7 @@ $main_font: Crushed;
   }
 
   .setGoalsButton{
-    height: 70px;
+   height: 70px;
     width: 133px;
     background-color: transparent;
     text-align: center;
@@ -447,6 +447,8 @@ $main_font: Crushed;
     border-radius: 10px;
     line-height: 25px;
     padding: 7px;
+    text-decoration: none;
+    font-weight: bold;
     font-family: $main_font;
     
   }
@@ -595,7 +597,7 @@ $main_font: Crushed;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 30px;
+    margin: 0 30px;
   }
 
   #readyToStart{
@@ -672,6 +674,11 @@ $main_font: Crushed;
       width: 235px;
       margin: 40px;
     }
+
+    .bodyFatPercHeader{
+    height: 93px;
+    font-size: 114px;
+  }
   }
 
   @media(min-width: 750px){

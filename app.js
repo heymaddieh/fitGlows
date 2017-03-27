@@ -52,8 +52,13 @@ angular.module('fitGlows', ['ui.router'])
       })
 
       .state('welcome', {
-        url: '/welcome',
+        url: '/welcomeBack',
         templateUrl: './views/welcome.html'
+      })
+
+      .state('welcomeTo', {
+        url: '/welcome',
+        templateUrl: './views/welcomeTo.html'
       })
 
       .state('warmUp', {
