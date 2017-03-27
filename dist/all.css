@@ -108,6 +108,11 @@ input, select {
   margin-top: 25px;
   margin-left: 24px; }
 
+#muscleman1 {
+  width: 175px;
+  z-index: 1;
+  margin: 50px; }
+
 .blenderContainer {
   display: flex;
   flex-direction: column;
@@ -168,7 +173,7 @@ input, select {
 
 .optionBackground {
   width: 74vw;
-  height: 70vh;
+  height: 50vh;
   background: #9DC3C3;
   border-radius: 3%;
   margin-top: 20px;
@@ -400,7 +405,8 @@ li.genderRadio {
   font-family: Crushed;
   background-color: #9DC3C3;
   border-radius: 15px;
-  margin-top: 20px; }
+  margin-top: 20px;
+  text-align: center; }
   .bfPercText p {
     font-family: Crushed;
     font-size: 25px; }
@@ -413,7 +419,7 @@ li.genderRadio {
     background: #9DC3C3;
     word-wrap: break-word;
     margin-top: 28px;
-    text-align: left;
+    text-align: center;
     padding: 7px;
     overflow-y: scroll;
     /* border: 1px solid grey; */
@@ -605,7 +611,10 @@ img#workoutImageDoorPull {
     display: none; }
   .googleLoginLarge {
     display: block;
-    width: 300px; } }
+    width: 300px; }
+  #muscleman1 {
+    width: 235px;
+    margin: 40px; } }
 
 @media (min-width: 750px) {
   #whiteBorder {

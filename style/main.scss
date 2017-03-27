@@ -29,6 +29,12 @@ $main_font: Crushed;
      
   }
 
+  #muscleman1{
+    width: 175px;
+    z-index: 1;
+    margin: 50px
+  }
+
   .blenderContainer{
     display: flex;
     flex-direction: column;
@@ -95,7 +101,7 @@ $main_font: Crushed;
   }
   .optionBackground{
     width: 74vw;
-    height: 70vh;
+    height: 50vh;
     background: $light_blue_background;
     border-radius: 3%;
     margin-top: 20px;
@@ -395,6 +401,7 @@ $main_font: Crushed;
     background-color: $light_blue_background;
     border-radius: 15px;
     margin-top: 20px;
+    text-align: center;
 
     p{
       font-family: $main_font;
@@ -412,7 +419,7 @@ $main_font: Crushed;
       background: $light_blue_background;
       word-wrap: break-word;
       margin-top: 28px;
-      text-align: left;
+      text-align: center;
       padding: 7px;
       overflow-y: scroll;
       /* border: 1px solid grey; */
@@ -420,6 +427,7 @@ $main_font: Crushed;
       line-height: 35px;
       font-family: $main_font;
       font-size: 27px;
+    
     }
   }
 
@@ -658,6 +666,11 @@ $main_font: Crushed;
     .googleLoginLarge{
       display: block;
       width: 300px;
+    }
+
+    #muscleman1{
+      width: 235px;
+      margin: 40px;
     }
   }
 
