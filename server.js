@@ -28,7 +28,7 @@ app.post('/num_workout', serverCtrl.numWorkout);
 
 app.listen(port, function(){
   console.log('listening on port', port)
-  console.log("these are words, and more words");
+  
 });
 
 
